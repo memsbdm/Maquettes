@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container{
+    background-color: white;
+    width: 920px;
+    height: 510px;
+    border-radius: 30px;
+    display: flex;
+}
+
+.left{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: -580px;
+    background-position-y: -290px;
+}
+
+.left::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position-x: -80px;
+    background-image: url(images/illustration-woman-online-desktop.svg);
+}
+
+.left::after{
+    content: url(images/illustration-box-desktop.svg);
+    position: absolute;
+    transform: translateX(-100px) translateY(210px);
+    animation: float 3s ease infinite;
+}
+
+
+@keyframes float{
+    0%{
+        transform: translateX(-100px) translateY(210px);
+    }
+    50%{
+        transform: translateX(-100px) translateY(200px);
+    }
+    100%{
+        transform: translateX(-100px) translateY(210px);
+    }
+}
+
+
+
+.right{
+    width: 50%;
+    height: 100%;
+}
+
+.right h1{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+
+
+
+.invisible{
+    display: none;
+    
+}
+
+
+
+
+
+
+
+.right li{
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom : 1px solid hsl(240, 5%, 91%);
+    width: 340px;
+    position: relative;
+    cursor: pointer;
+}
+
+.right li:hover{
+    color: hsl(14, 88%, 65%);
+}
+
+
+.right li img{
+    position: absolute;
+    right: 0;
+    transform: rotate(0);
+}
+
+.right p{
+    margin-top: 10px;
+    font-size: 12px;
+    color: hsl(240, 6%, 50%);
+    font-weight: 400 !important;
+    line-height: 18px;
+}
+
+
+
+.activeQuestion{
+    font-weight: 700;
+}
+
+
+.activeArrow{
+    animation: arrowUp 1s forwards;
+}
+
+
+@keyframes arrowUp{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:950px){
+    body{
+        padding: 50px 0;
+    }
+    .container{
+        height: 600px;
+        width: 90%;
+        flex-direction: column;
+        
+    }
+
+    .left{
+        width: 100%;
+        height: 20%;
+        background: none;
+        position: relative;
+    }
+
+
+    .left::before{
+        display: none;
+       
+    }
+
+    .left::after{
+        display: none;
+    }
+
+
+    .right{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right h1{
+        transform: translateY(-210px);
+        position:absolute;
+        margin-top: 0;
+    }
+
+   
+
+    .right h1::before{
+        content: url(images/illustration-woman-online-mobile.svg) ;
+        position: absolute;
+        transform: translateX(-110px) translateY(-250px);
+    }
+
+    .right ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .right li{
+        width:500px;
+    }
+
+    .right p{
+        width: 500px;
+    }
+    
+    
+
+}
+
+
+@media screen and (max-width:600px){
+
+    .right li{
+        width:400px;
+    }
+
+    .right p{
+        width: 400px;
+    }
+
+}
+
+
+
+@media screen and (max-width:460px){
+
+    .right li{
+        width:300px;
+    }
+
+    .right p{
+        width: 300px;
+    }
+
+}
+
+
+@media screen and (max-width:350px){
+
+    .right li{
+        width:275px;
+    }
+
+    .right p{
+        width: 275px;
+    }
+
+}

@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* 400 - 500 - 700 */
+}
+
+h2{
+    font-size: 13px;
+    color: white;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+body{
+    height: 100%;
+}
+
+.main{
+    height: 100vh;
+    background-image: url(images/);
+    position: relative;
+    width: 100%;
+    
+}
+
+
+
+.bg-top{
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 40%;
+    height: 85%;
+    background-image: linear-gradient(hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    border-radius: 0px 0px 300px 369px;
+}
+
+
+.bg-bottom{
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    width: 40%;
+    height: 85%;
+    background-image: linear-gradient(hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    border-radius: 300px 369px 0 0;
+    opacity: 0.1;
+}
+
+
+.phone{
+    left:25%;
+    top:25%;
+    height: 480px;
+    position: relative;
+    width: 230px;
+    background-color:  hsl(270, 20%, 96%);
+    border-radius: 30px;
+    border: solid 10px white;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+
+}
+
+.phone::before{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 17px;
+    background-color: white;
+    border-radius: 0 0 12px 12px;
+    top: -1px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.phone-top{
+    width: 230px;
+    height: 65px;
+    background-image: linear-gradient(to left, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    border-radius: 20px 20px 7px 7px;
+    display: flex;
+    align-items: center;
+}
+.phone-top i{
+    color:white;
+    position: absolute;
+    opacity: 0.7;
+}
+
+.phone-top i:last-of-type{
+    position: absolute;
+    right: 15px;
+    font-size: 12px;
+    top:32px;
+}
+
+.phone-top i:first-of-type{
+    position: absolute;
+    top:32px;
+    left: 10px;
+}
+
+.phone-top-txt{
+    position: absolute;
+    left:60px;
+    top: 25px;
+}
+.phone-top p{
+    color:white;
+    font-size: 10px;
+    opacity: 0.4;
+}
+.phone-top img{
+    width: 11%;
+    border-radius: 50%;
+    border: 2px solid rgb(255,255,255,0.6);
+    position: absolute;
+    left:25px;
+    top: 24px;
+}
+
+.phone-body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.phone-body p{
+    font-size: 8px;
+}
+
+.pink-msg{
+    width: 125px;
+    height: 35px;
+    background-color: hsl(275, 91%, 87%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: hsl(276, 55%, 52%);
+}
+
+.pink-msg p, .white-msg-one p, .white-msg-two p{
+    margin-left: 10px;
+    line-height: 12px;
+}
+
+
+.dog{
+    display: flex;
+    width: 140px;
+    position:absolute;
+    right: 10px;
+    margin-top: 15px;
+    justify-content: space-around;
+}
+
+.dog img{
+    width: 30%;
+    height: 30%;
+    border-radius: 10px;
+}
+
+.white-msg-one, .white-msg-two{
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.white-msg-one{
+    width: 125px;
+    height: 35px;
+    position: absolute;
+    top:160px;
+    right: 10px;
+}
+
+
+
+.white-msg-two{
+    position: absolute;
+    top:200px;
+    right: 10px;
+    width: 80px;
+    height: 25px;
+}
+
+.white-msg-two p{
+    margin-left: 0;
+}
+
+.pink-msg-last{
+    position: absolute;
+    top:230px;
+    left: 10px;
+    width: 125px;
+    height: 45px;
+    background-color: hsl(275, 91%, 87%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color:hsl(276, 55%, 52%);
+}
+.pink-msg-last p{
+    margin-left: 10px;
+    margin-right: 5px;
+    line-height: 12px;
+}
+
+.linear-msg{
+    height: 35px;
+    width: 160px;
+    background-image:linear-gradient(to right, hsl(293, 100%, 63%),hsl(264, 100%, 61%)) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 10px 5px;
+}
+
+.linear-one{
+    position: absolute;
+    top:295px;
+    left:10px;
+}
+.linear-two{
+    position: absolute;
+
+    top:335px;
+    left:10px;
+}
+span{
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.linear-msg i{
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    left: 10px;
+}
+
+.linear-msg p{
+    position: absolute;
+    left: 33px;
+    top: 7px;
+    color: white;
+}
+
+
+.linear-one span{
+    margin-left: 20px;
+}
+
+.linear-two span{
+    margin-left: 36px;
+}
+.insert{
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+    position: absolute;
+    top:380px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.insert p{
+    margin-left: 15px;
+    color: hsl(270, 7%, 64%);
+}
+
+.insert a{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: hsl(271, 36%, 24%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 103px;
+}
+.insert i{
+    color:white;
+    font-size: 10px;
+    
+}
+
+
+.title{
+    position: relative;
+    width: 31%;
+    z-index: 2;
+    left:50%;
+    bottom:15%;
+}
+
+
+.title h1{
+    font-size: 35px;
+    font-weight: 500;
+    color: hsl(271, 36%, 24%);
+    margin-bottom: 30px;
+}
+
+.title p{
+    color: hsl(270, 7%, 64%);
+    font-size: 16px;
+    line-height: 25px;
+}
+
+
+@media screen and (max-width:1100px){
+   
+    .phone{
+        left: 50%;
+        transform:translateX(-50%);
+        top:50px;
+    }
+    .title{
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 90%;
+        margin-top: 200px;
+        padding-bottom: 50px;
+    }
+
+}
+
+@media screen and (max-width:760px){
+    *{
+        overflow-y: auto;
+    }
+
+    .main{
+        height: 100%;
+    }
+    .title{
+        margin-top: 100px;
+    }
+    .bg-top,.bg-bottom{
+        height: 50%;
+        width: 60%;
+    }
+}

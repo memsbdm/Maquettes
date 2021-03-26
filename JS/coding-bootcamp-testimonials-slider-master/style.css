@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-position-x:90%;
+    background-position-y: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+body::before{
+    content: url(images/pattern-curve.svg);
+    position: absolute;
+    bottom: 0;
+}
+
+
+body::after{
+    content: url(images/pattern-quotes.svg);
+    position: absolute;
+    top:25%;
+    left: 17%;
+}
+
+.slider-container{
+    position: absolute;
+    height: 540px;
+    width: 540px;
+    top: calc(50% - 260px);
+    right: 11%;
+    border-radius: 5px;
+}
+
+.sliding{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.sliding img{
+    border-radius: 5px;
+}
+
+.slideBtn{
+    width: 110px;
+    height: 55px;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: -4px -3px 45px 21px rgba(0,0,0,0.2);
+    position: absolute;
+    transform: translateX(50px) translateY(-35px);
+}
+
+.rightBtn, .leftBtn{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 50%;
+}
+
+.rightBtn img , .leftBtn img{
+    cursor: pointer;
+}
+
+
+
+.text{
+    width: 40%;
+    height: 260px;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    left: 10%;
+    z-index: 2;
+}
+
+.text p{
+    font-weight: 300;
+    font-size: 32px;
+    color:hsl(240, 38%, 20%);
+}
+
+.text .inf{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 15px;
+    
+}
+
+.text .inf h1{
+    font-weight: 700;
+    font-size: 25px;
+    color:hsl(240, 38%, 20%);
+}
+
+.text .inf h2{
+    font-size: 20px;
+    font-weight: 500;
+    color:hsl(240, 18%, 77%);
+    margin-left: 10px;
+}
+
+
+
+@media screen and (max-width: 1200px){
+    .slider-container{
+        height: 440px;
+        width: 440px;
+        top: calc(50% - 150px);
+        right: 5%;
+    }
+    .sliding{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    
+    .sliding .image img{
+        border-radius: 5px;
+        width: 100%;
+    }
+    
+}
+
+
+
+@media screen and (max-width : 1050px){
+    body{
+        background-image: url(images/pattern-bg.svg);
+        background-repeat: no-repeat;
+        background-position-x:90%;
+        background-position-y: 50%;
+        background-position: center;
+        background-position-y: 5%;
+        background-size: 50%;
+      
+    }
+
+
+    body::before{
+        content: "";
+        background-image: url(images/pattern-curve.svg);
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-position-x: 0;
+    }
+
+    body::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(images/pattern-quotes.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        top:0;
+        left: 0;
+    }
+
+
+
+    .slider-container{
+        height: 400px;
+        width: 400px;
+        top: 7%;
+        right: calc(50% - 200px);
+
+    }
+
+    .slideBtn{
+        transform: translateX(68px) translateY(-35px);
+        z-index: 3;
+    }
+    
+    .text{
+        width: 90%;
+        height: auto;
+        left: 5%;
+        margin-top: 20%;
+        text-align: center;
+    }
+
+  
+
+    
+    .text .inf{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        
+    }
+    
+    
+    
+
+}
+
+
+@media screen and (max-width:550px){
+    .slider-container{
+        height: 240px;
+        width: 240px;
+        top: 7%;
+        right: calc(50% - 120px);
+
+    }
+    .text{
+        width: 90%;
+        height: auto;
+        left: 5%;
+        margin-top: 40%;
+        text-align: center;
+    }
+    .text p{
+        font-size: 16px;
+    }
+    .text .inf h1{
+        font-size: 18px;
+    }
+    
+    .text .inf h2{
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width:350px){
+    
+    .text{
+        width: 90%;
+        height: auto;
+        left: 5%;
+        margin-top: 70%;
+        text-align: center;
+    }
+   
+}
+
+
+@media screen and (orientation:landscape) and (min-device-height: 200px) and (max-device-height: 800px) {
+   
+    body{
+       height: 400vh;
+    }
+}
